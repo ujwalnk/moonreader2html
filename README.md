@@ -31,7 +31,7 @@ python mrexpt2html.py Alice.mrexpt -a "Lewis Carroll"
 
 # Here is a simple output of my highlights from Make Time
 
-![[sample.png]]
+<img src="./sample.png"></img>
 
 ### Options
 **`debug`**
