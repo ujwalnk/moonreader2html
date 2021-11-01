@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+                              "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd" >
+<html xmlns="http://www.w3.org/TR/1999/REC-html-in-xml" xml:lang="en"
+	lang="en">
+<html xml:lang="en" lang="en">
+<head>
+<meta http-equiv="Content-Type" content="application/xhtml+xml; charset=UTF-8" />
+<!-- HTML5 -->
+<meta charset="UTF-8" />
+<title>Book Review</title>
+<style>
+.note{border:1px solid rgba(189,189,189,.411);padding:10px;margin:10px 0 10px 0;border-radius:0px 5px 5px 0px;border-left:5px solid}.note__text{border:1px solid hsla(0,0%,74%,.164);padding:10px;background-color:#faebd7;margin-top:10px;margin-bottom:10px}.highlight__text{padding-left:10px}body{margin:40px 40px}.grid{background-color:#f0f8ff;margin:-10px;padding:10px;margin-bottom:20px;display:grid;grid-template-areas:'img header' 'img footer';font-family:Impact}.grid>div{text-align:right;padding:20px 0;font-size:25px}h2{font-family:Impact; font-weight:100}
+</style>
+</head>
+<body>
+ </div> <div class="grid"> <img src="data:image/png;base64, {{image}}" style="grid-area: img; width: clamp(20px, 15vw, 500px)"> <div style="grid-area: header"> {{book_name}} </br> </div> <div style="grid-area: footer; font-size: clamp(10px, 2vw, 25px) !important;">{{author}}  </div> </div> <h2>Highlights & Notes</h2>
+{% for highlight in highlights %}
+<div class="note" style="border-left-color:#{{highlight.color}}">
+<div class="note__highlight" style="position: relative;"><div class="highlight__text">{{highlight.text}}</div></div>{% if highlight.note %}<div class="note__text">{{highlight.note}}</div>{% endif %}<div style="color: rgb(187, 187, 187); text-align: right; font-family: Impact;">{{highlight.location}}</div>
+    </div>
+
+{% endfor %}
+</body>
+</html>
